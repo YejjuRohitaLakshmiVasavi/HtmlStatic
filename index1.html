@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound</title>
+    <link ref="stylesheet" href="style1.css">
+    <style>
+        h1 {text-align: center;}
+        </style>
+        <style>
+   #example1 {
+    background-image: linear-gradient(rgba(237, 149, 189, 0.889), rgba(226, 77, 99, 0.812));
+    margin: auto;
+    box-sizing: content-box;  
+    width: 500px;
+    height: 300px;
+    padding: 80px;  
+    border: 5px solid rgba(159, 36, 173, 0.9);
+  }
+  #example2 {
+    background-image: linear-gradient(rgba(234, 190, 210, 0.889), rgba(246, 194, 202, 0.784));
+   
+    box-sizing: content-box;  
+    width: 600px;
+    height: 180px;
+    padding: 30px;  
+    border: 5px solid rgba(159, 36, 173, 0.9);
+  }
+  #example3 {
+    background-image: linear-gradient(rgba(234, 190, 192, 0.889), rgba(226, 146, 158, 0.784));
+   
+    box-sizing: content-box;  
+    width: 400px;
+    height: 180px;
+    padding: 20px;  
+    border: 5px solid rgba(159, 36, 173, 0.9);
+  }
+  #example4 {
+    background-image: linear-gradient(rgba(233, 190, 234, 0.889), rgba(226, 146, 146, 0.803));
+   
+    box-sizing: content-box;  
+    width: 400px;
+    height: 180px;
+    padding: 20px;  
+    border: 5px solid rgba(159, 36, 173, 0.9);
+  }
+
+  
+</style>
+
+
+    <style>
+        /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+        .flip-card {
+          background-color: transparent;
+          width: 300px;
+          height: 250px;
+          border: 1px solid #f1f1f1;
+          perspective: 1000px; /* Remove this if you don't want the 3D effect */
+          margin-left: 200px;
+          
+          
+        }
+        
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+        }
+        
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+        
+        /* Position the front and back side */
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden; /* Safari */
+          backface-visibility: hidden;
+        }
+        
+        /* Style the front side (fallback if image is missing) */
+        .flip-card-front {
+          background-color: #bbb;
+          color: black;
+        }
+        
+        /* Style the back side */
+        .flip-card-back {
+          background-color: #EBDEF0;
+          color: black;
+          transform: rotateY(180deg);
+        }
+        
+        body{
+         margin: 0;
+         font-family: Arial, Helvetica, sans-serif;
+         }
+         .topnav {
+            overflow: hidden;
+            background-color: #333;
+         }
+         .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center; 
+            padding: 14px  16px;
+            text-decoration: none;
+            font-size: 17px  ;
+         }
+         .topnav a:hover, .dropdown:hover .dropbtn {
+          background-color: rgb(236, 122, 198);
+          color: black;
+        }
+        
+        .topnav a.active{
+           background: powderblue;
+           color: white;
+         } 
+         .center {
+           display: block;
+           margin-Left: auto;
+           margin-right: auto;
+           width: 50%;
+         }
+        </style>
+        <style>
+          body {
+            background: linear-gradient(to right, #1c87c9a3, #8dbf4295);
+            height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+          }
+          </style>
+</head>
+<body >
+    
+        <h1 style="color: rgba(255, 0, 221, 0.632)"><b>SOUND</b></h1>
+    <h1><i>Increase and Decrease of sound</i></h1>
+    <h3 style="text-align:center;">change of expressions on Increase in pitch </h3>
+    <div id="example1">
+        <p style="text-align:center;" >
+            <img src="inaudi.svg"  height="250px" id="bulbs"/>
+            <br>
+            
+        <button onclick="changes1()" id="on1"><font size="6">+</font></button>
+        <button onclick="changes()" id="off1"><font size="6">-</font></button></p>
+    </div><br>
+    <br>
+    <br>
+    <br>
+    <script>var myButton = document.getElementById('on1');
+        myButton.style.height = '50px';
+        myButton.style.width= '50px';
+        var myButton = document.getElementById('off1');
+        myButton.style.height = '50px';
+        myButton.style.width= '50px';
+        </script>
+    <script>
+    function changes1()
+    {
+        var statu=document.getElementById("bulbs")
+        if(statu.src.match("inaudi"))
+        statu.src="sound.svg"
+        else if(statu.src.match("sound"))
+        statu.src="noise.svg"
+        
+    }
+    function changes()
+    {
+        var statu=document.getElementById("bulbs")
+        if(statu.src.match("sound"))
+        statu.src="inaudi.svg"
+        else if (statu.src.match("noise"))
+        statu.src="sound.svg"
+    }
+</script>
+<h1 style="color: rgba(255, 0, 149, 0.677)" align="center"><i>Characteristics of sound wave</i></h1>
+<h3>Characteristics of sound wave are :<br>• frequency<br>
+  • amplitude and<br>
+  • speed.</h3>
+<br>
+<div>
+<table style="width:100%">
+  <tr >
+  <td >
+<br>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="freq.png" alt="Frequency"  height="250px" width="300">
+    </div>
+    <div class="flip-card-back">
+      <br>
+      <p>the number of waves that pass a fixed point in unit time. It also describes the number of cycles or vibrations undergone during one unit of time by a body in periodic motion.</p>
+    </div>
+  </div>
+</div>
+
+</center>
+  </td>
+<br>
+<td>
+  <div id="example4">
+    <select id="select1">
+      <option value=" of Human is 20Hz to 20KHz">Human</option>
+      <option value=" of Tuna is 50Hz to 1.1kHz">Tuna</option>
+      <option value=" of BullFrog is 100Hz to 3KHz">BullFrog</option>
+      <option value=" of Elephant is 17Hz to 10.5KHz">Elephant</option>
+      <option value=" of Owl is 200Hz to 12KHz">Owl</option>
+      <option value=" of horse is 55Hz to 33.5KHz">Horse</option>
+      <option value=" of cat is 55Hz to 77KHz">Cat</option>
+      <option value=" of gold fish is 100Hz to 2KHz">GoldFish</option>
+  </select><br><br>
+  
+     <button onclick="getOption()"> Get Frequency </button><br><br>
+     <p>   Audible sound range   <span class="output"></span>     </p>
+    <script type="text/javascript">
+    function getOption() {
+        selectElement = document.querySelector('#select1');
+        output = selectElement.value;
+        document.querySelector('.output').textContent = output;
+    }
+    </script>
+  </div>
+</td>
+<tr>
+  <td>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="ampli.png" alt="Amplitude" height="250px" width="300" >
+    </div>
+    <div class="flip-card-back">
+      <br>
+
+      
+      <p>The maximum displacement of a vibrating object from its Central position is called the amplitude of vibration</p>
+    </div>
+  </div>
+</div>
+</td>
+<td>
+  <div id="example2">
+    <input type="text" id="myText" >
+  <button onclick="myFunction()">Try it</button>
+  <button onclick="Function()">reset</button><br>
+  <canvas id="myCanvas" width="600" height="150" style="border:3px solid #ce82e7;">
+  </canvas>
+  </div>
+
+</td>
+</tr>
+<br>
+<tr>
+  <td>
+<div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="speed.png" alt="velocity" height="250px" width="300">
+      </div>
+      <div class="flip-card-back">
+        <br>
+        <p>the direction of the movement of the body or the object<br><br><b>speed=wavelength/time period</b> 
+        </p>
+      </div>
+    </div>
+  </div>
+</td>
+<td>
+  <div id="example3">
+  <input type="text" id="myText1" value="enter wave length" ><br><br>
+  <input type="text" id="myText2" value="enter frequency" >  <br><br>
+  <button onclick="getvelocity()">submit</button><br>
+  <p id="demo"></p>
+</div>
+</td>
+</tr>
+  
+<script>
+  function getvelocity()
+  {
+    var w=document.getElementById("myText1").value;
+    var f=document.getElementById("myText2").value;
+    var v=w * f;
+    document.getElementById("demo").innerHTML = "Velocity is "+v;
+  }
+</script>
+  
+  <script>
+    function myFunction() {
+  var x=document.getElementById("myText").value;
+   var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var i;
+var amplitude = x;
+var width = c.width;
+var height = c.height / 2;
+var step = 1;
+var frequency = 4;
+ctx.moveTo(0, height);
+ctx.lineTo(width, height);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(0, height);
+var c = width / Math.PI / (frequency * 2);
+
+
+  for (i = 0; i < width; i += step) {
+  var x = amplitude * Math.sin(i / c);
+  ctx.lineTo(i, height + x);
+ 
+}
+
+ctx.strokeStyle = '#0096FF';
+ctx.stroke();
+ctx.destroy();
+    }
+    function Function()
+    {
+    }
+    
+  </script>
+  <br>
+  <div>
+    
+  </div>
+</body>
+</html>
